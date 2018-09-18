@@ -1,10 +1,8 @@
-<UI version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>QWMinWindClass</class>
- <widget class="QMainWindow" name="QWMinWindClass" >
-  <property name="objectName" >
-   <string notr="true">QWMinWindClass</string>
-  </property>
-  <property name="geometry" >
+ <widget class="QMainWindow" name="QWMinWindClass">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
@@ -12,18 +10,316 @@
     <height>400</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>QWMinWind</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>481</width>
+      <height>251</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionactNew"/>
+    <addaction name="separator"/>
+    <addaction name="actionactOpen"/>
+    <addaction name="actionactClose"/>
+   </widget>
+   <widget class="QMenu" name="menuedit">
+    <property name="title">
+     <string>edit</string>
+    </property>
+    <addaction name="actionactCut"/>
+    <addaction name="actionactCopy"/>
+    <addaction name="actionactPaste"/>
+    <addaction name="actionactClear"/>
+   </widget>
+   <widget class="QMenu" name="menustyle">
+    <property name="title">
+     <string>style</string>
+    </property>
+    <addaction name="actFontBold"/>
+    <addaction name="actFontItalic"/>
+    <addaction name="actFontUnder"/>
+    <addaction name="separator"/>
+    <addaction name="actionactToolBarLab"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menuedit"/>
+   <addaction name="menustyle"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionactNew"/>
+   <addaction name="actionactOpen"/>
+   <addaction name="actionactClear"/>
+   <addaction name="separator"/>
+   <addaction name="actionactCut"/>
+   <addaction name="actionactCopy"/>
+   <addaction name="actionactPaste"/>
+   <addaction name="separator"/>
+   <addaction name="actFontItalic"/>
+   <addaction name="actFontBold"/>
+   <addaction name="actFontUnder"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionactCut">
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/cut.bmp</normaloff>:/QWMinWind/images/cut.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>actCut</string>
+   </property>
+   <property name="toolTip">
+    <string>actionactCut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionactCopy">
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/120.bmp</normaloff>:/QWMinWind/images/120.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>actCopy</string>
+   </property>
+   <property name="toolTip">
+    <string>actionactCopy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionactPaste">
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/paste.bmp</normaloff>:/QWMinWind/images/paste.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>actPaste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actFontBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/BLD.BMP</normaloff>:/QWMinWind/images/BLD.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>actFontBold</string>
+   </property>
+  </action>
+  <action name="actFontItalic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/ITL.BMP</normaloff>:/QWMinWind/images/ITL.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>actFontItalic</string>
+   </property>
+  </action>
+  <action name="actFontUnder">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/UNDRLN.BMP</normaloff>:/QWMinWind/images/UNDRLN.BMP</iconset>
+   </property>
+   <property name="text">
+    <string>actFontUnder</string>
+   </property>
+  </action>
+  <action name="actionactClose">
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/exit.bmp</normaloff>:/QWMinWind/images/exit.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>actClose</string>
+   </property>
+  </action>
+  <action name="actionactOpen">
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/open3.bmp</normaloff>:/QWMinWind/images/open3.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>actOpen</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionactClear">
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/103.bmp</normaloff>:/QWMinWind/images/103.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>actClear</string>
+   </property>
+  </action>
+  <action name="actionactFont">
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/20.ico</normaloff>:/QWMinWind/images/20.ico</iconset>
+   </property>
+   <property name="text">
+    <string>actFont</string>
+   </property>
+  </action>
+  <action name="actionactNew">
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/new2.bmp</normaloff>:/QWMinWind/images/new2.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>actNew</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionactToolBarLab">
+   <property name="icon">
+    <iconset resource="QWMinWind.qrc">
+     <normaloff>:/QWMinWind/images/430.bmp</normaloff>:/QWMinWind/images/430.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>actToolBarLab</string>
+   </property>
+  </action>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources>
-   <include location="QWMinWind.qrc"/>
+  <include location="QWMinWind.qrc"/>
  </resources>
- <connections/>
-</UI>
+ <connections>
+  <connection>
+   <sender>actionactCut</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>cut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionactCopy</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionactPaste</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionactClose</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionactClear</sender>
+   <signal>triggered()</signal>
+   <receiver>textEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
